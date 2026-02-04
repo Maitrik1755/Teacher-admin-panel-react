@@ -48,9 +48,3 @@ A simple Teacher Admin Panel built with React. It includes Login/Register with r
 
 ---
 
-## Getting Started
-
-### 1) Clone the repo
-```bash
-git clone <your-repo-url>
-cd <your-folder>

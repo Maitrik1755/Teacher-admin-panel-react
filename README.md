@@ -1,16 +1,56 @@
-# React + Vite
+# Teacher Admin Panel (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Teacher Admin Panel built with React. It includes Login/Register with role selection, teacher-only access to the dashboard, and localStorage-based persistence. The admin dashboard contains Subjects and Students sections and a profile dropdown with logout.
 
-Currently, two official plugins are available:
+> ⚠️ Note: Authentication is implemented using localStorage for learning/demo purposes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### Auth (localStorage)
+- Register with **role selection** (Teacher / Student)
+- Login with email + password + role check
+- **Teacher-only redirect** to Admin Dashboard
+- Stores logged-in user session in localStorage
+- Logout clears session
 
-## Expanding the ESLint configuration
+### Admin Dashboard
+- Yellow themed top navbar
+- Profile icon button (top-right)
+- Profile card shows:
+  - Full name
+  - Email
+  - Role
+  - Logout button
+- Subjects and Students UI cards (Bootstrap)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Routing
+- React Router DOM pages:
+  - `/` (Login)
+  - `/register` (Register)
+  - `/admin` (Teacher dashboard)
+- Nested routes implemented for Contact page (Instagram/Facebook/LinkedIn/WhatsApp)
+
+### State Management Practice
+- Context API practice (basic)
+- Redux Toolkit practice (counter example with increment/decrement actions)
+
+---
+
+## Tech Stack
+
+- **React**
+- **React Router DOM**
+- **Bootstrap**
+- **Redux Toolkit** (practice counter module)
+- **localStorage** for persistence (demo)
+
+---
+
+## Getting Started
+
+### 1) Clone the repo
+```bash
+git clone <your-repo-url>
+cd <your-folder>
